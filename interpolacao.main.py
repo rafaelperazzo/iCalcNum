@@ -1,10 +1,14 @@
 # -*- coding: utf-8 -*-
+#RAFAEL PERAZZO
 from PyQt4.QtGui import *
 import sys
 import interpolacao as z
 from interpolacaoUi import *
 import numpy as np
 import pylab as plt
+
+def mostrarResultado():
+    print 'teste'
 
 def str2list(texto):
     resultado = map(float,texto.split())
@@ -23,14 +27,14 @@ def mensagem(tipo,titulo,texto,detalhes):
         msg.setIcon(QMessageBox.Critical)
     
     msg.setText(texto)
-    msg.setInformativeText("This is additional information")
+    msg.setInformativeText("Informações adicionais")
     msg.setWindowTitle(titulo)
     msg.setDetailedText(detalhes)
     msg.setStandardButtons(QMessageBox.Ok)
     retval = msg.exec_()
 
 def entradaValida():
-    input1 = False    
+    input1 = False   
     input2 = False
     input3 = False
     input4 = False
