@@ -110,8 +110,11 @@ def newton (x1,y1,precisao,ponto):
             resultado = resultado + ')'
     #resultado = simplify(resultado)
     return (soma,resultado,simplify(resultado))
-    
-'''init_printing(use_unicode=True)
+
+
+
+'''
+init_printing(use_unicode=True)
 x = [0,30,70,100]
 y= [0.94,1.05,1.17,1.28]
 
@@ -122,13 +125,10 @@ y= [5,9,10,8]
 
 print(splinesLineares(x,y,4,12.7))
 
+
 cx = [1,2,4,5,7]
 cy= [52,5,-5,-40,10]
-cx = [1,2,4]
-cy= [52,5,-5]
-print(lagrange(cx,cy,4,3)[0])
-print(lagrange(cx,cy,4,3)[1])
-print(lagrange(cx,cy,4,3)[2])
+print(lagrange(cx,cy,4,3))
 
 
 cx = [1,2,4,5,7]
