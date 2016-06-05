@@ -241,8 +241,20 @@
      <height>27</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuArquivo">
+    <property name="title">
+     <string>Arquivo</string>
+    </property>
+    <addaction name="actionSalvarComo"/>
+   </widget>
+   <addaction name="menuArquivo"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalvarComo">
+   <property name="text">
+    <string>Salvar Como</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

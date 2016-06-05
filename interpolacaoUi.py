@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interpolacao.ui'
 #
-# Created: Sat May 28 11:53:59 2016
+# Created: Sun Jun  5 12:20:40 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -130,10 +130,16 @@ class Ui_interpolacaoPrincipal(object):
         self.menubar = QtGui.QMenuBar(interpolacaoPrincipal)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 810, 27))
         self.menubar.setObjectName(_fromUtf8("menubar"))
+        self.menuArquivo = QtGui.QMenu(self.menubar)
+        self.menuArquivo.setObjectName(_fromUtf8("menuArquivo"))
         interpolacaoPrincipal.setMenuBar(self.menubar)
         self.statusbar = QtGui.QStatusBar(interpolacaoPrincipal)
         self.statusbar.setObjectName(_fromUtf8("statusbar"))
         interpolacaoPrincipal.setStatusBar(self.statusbar)
+        self.actionSalvarComo = QtGui.QAction(interpolacaoPrincipal)
+        self.actionSalvarComo.setObjectName(_fromUtf8("actionSalvarComo"))
+        self.menuArquivo.addAction(self.actionSalvarComo)
+        self.menubar.addAction(self.menuArquivo.menuAction())
 
         self.retranslateUi(interpolacaoPrincipal)
         QtCore.QMetaObject.connectSlotsByName(interpolacaoPrincipal)
@@ -160,4 +166,6 @@ class Ui_interpolacaoPrincipal(object):
         self.txtPonto.setToolTip(_translate("interpolacaoPrincipal", "Ponto a ser interpolado", None))
         self.txtPonto.setText(_translate("interpolacaoPrincipal", "3", None))
         self.btnCalcular.setText(_translate("interpolacaoPrincipal", "Calcular", None))
+        self.menuArquivo.setTitle(_translate("interpolacaoPrincipal", "Arquivo", None))
+        self.actionSalvarComo.setText(_translate("interpolacaoPrincipal", "Salvar Como", None))
 

@@ -7,6 +7,9 @@ from interpolacaoUi import *
 import numpy as np
 import pylab as plt
 
+reload(sys)  
+sys.setdefaultencoding('utf8')
+
 def str2list(texto):
     resultado = map(float,texto.split())
     if type(resultado) is list:
@@ -175,8 +178,6 @@ def btnVerGraficoClick():
         plt.grid(True)
         fx, = plt.plot(eixoX,eixoY, 'r',label='f(x)',color='k',linewidth=2.0)
         #dx, = plt.plot(x,y2,'r', label='f\'(x)',color='k',linewidth=1.0)
-        print (eixoX)
-        print (eixoY)
         plt.show()
     else:    
         funcao = str(funcao)
@@ -224,6 +225,15 @@ def btnAleatorioClick():
     ui.txtX.setText(lX)
     ui.txtY.setText(lY)
 
+def salvar():
+    fileName = QFileDialog.getSaveFileName(None, "Salvar Como")
+    if (fileName!=''):
+        f = open(fileName,'w')
+        resultado = str(ui.txtX.text()) + '\n' + str(ui.txtY.text()) + '\n'
+        resultado = resultado + str(ui.txtResultado.toPlainText()) +  '\n'
+        f.write(resultado)
+        f.close()
+
 #INICIANDO APLICACAO
 app = QApplication(sys.argv)
 
@@ -237,6 +247,7 @@ ui.btnGrafico.clicked.connect(btnVerGraficoClick)
 ui.btnAleatorios.clicked.connect(btnAleatorioClick)
 #ui.actionSair.triggered.connect(sair)
 ui.cmbMetodo.currentIndexChanged.connect(cmbMetodoChanged)
+ui.actionSalvarComo.triggered.connect(salvar)
 window.show()
 
 sys.exit(app.exec_())
