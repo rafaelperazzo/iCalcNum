@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from sympy import *
+from sympy.core.sympify import kernS
 
 def minimosQuadrados(x,y,precisao):
     Sx = 0
@@ -114,16 +115,21 @@ def newton (x1,y1,precisao,ponto):
 
 
 '''
-init_printing(use_unicode=True)
+
 x = [0,30,70,100]
 y= [0.94,1.05,1.17,1.28]
 print(minimosQuadrados(x,y,4))
 x = [8,11,15,18]
 y= [5,9,10,8]
 print(splinesLineares(x,y,4,12.7))
+
+init_printing(use_unicode=True)
 cx = [1,2,4,5,7]
 cy= [52,5,-5,-40,10]
-print(lagrange(cx,cy,4,3))
+expressao=sympify(lagrange(cx,cy,4,3)[1])
+print(pretty(expressao))
+print(lagrange(cx,cy,4,3)[1])
+
 cx = [1,2,4,5,7]
 cy= [52,5,-5,-40,10]
 print(splinesLineares(cx,cy,4,3))

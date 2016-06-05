@@ -2,7 +2,7 @@
 
 # Form implementation generated from reading ui file 'interpolacao.ui'
 #
-# Created: Sun Jun  5 12:20:40 2016
+# Created: Sun Jun  5 17:27:41 2016
 #      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
@@ -26,7 +26,7 @@ except AttributeError:
 class Ui_interpolacaoPrincipal(object):
     def setupUi(self, interpolacaoPrincipal):
         interpolacaoPrincipal.setObjectName(_fromUtf8("interpolacaoPrincipal"))
-        interpolacaoPrincipal.resize(810, 538)
+        interpolacaoPrincipal.resize(810, 536)
         self.centralwidget = QtGui.QWidget(interpolacaoPrincipal)
         self.centralwidget.setObjectName(_fromUtf8("centralwidget"))
         self.horizontalLayoutWidget = QtGui.QWidget(self.centralwidget)

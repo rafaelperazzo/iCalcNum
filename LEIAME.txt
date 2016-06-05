@@ -1,0 +1,7 @@
+Para usar é necessário instalar o Software Anaconda 4
+https://www.continuum.io/downloads
+
+Após instalar o Anaconda, 
+Execute o arquivo interpolacao.bat
+
+

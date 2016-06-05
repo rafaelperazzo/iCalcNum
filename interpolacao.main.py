@@ -6,6 +6,7 @@ import interpolacao as z
 from interpolacaoUi import *
 import numpy as np
 import pylab as plt
+from sympy import *
 
 reload(sys)  
 sys.setdefaultencoding('utf8')
@@ -125,11 +126,15 @@ def btnCalcularClick():
             ui.txtResultado.append('***************************')        
             ui.txtResultado.append(u'Polinômio não simplificado')
             ui.txtResultado.append('***************************')
-            ui.txtResultado.append('f(x)= ' + str(resultado[1]))
+            expressao = sympify(resultado[1])
+            expressao = pretty(expressao,use_unicode=True)
+            ui.txtResultado.append(expressao)
+            #ui.txtResultado.append('f(x)= ' + str(resultado[1]))
             ui.txtResultado.append('***************')        
             ui.txtResultado.append('SIMPLIFICANDO')
             ui.txtResultado.append('***************')
-            ui.txtResultado.append('f(x)= ' + str(resultado[2]))
+            ui.txtResultado.append(pretty(resultado[2],use_unicode=True))
+            
         else: #DIFERENÇAS DIVIDIDAS
             ponto = float(ui.txtPonto.text())
             resultado = z.newton(eixoX,eixoY,precisao,ponto)
@@ -140,11 +145,14 @@ def btnCalcularClick():
             ui.txtResultado.append('***************************')        
             ui.txtResultado.append(u'Polinômio não simplificado')
             ui.txtResultado.append('***************************')
-            ui.txtResultado.append('f(x)= ' + str(resultado[1]))
+            expressao = sympify(resultado[1])
+            expressao = pretty(expressao,use_unicode=True)
+            ui.txtResultado.append(expressao)
+            #ui.txtResultado.append('f(x)= ' + str(resultado[1]))
             ui.txtResultado.append('***************')        
             ui.txtResultado.append('SIMPLIFICANDO')
             ui.txtResultado.append('***************')
-            ui.txtResultado.append('f(x)= ' + str(resultado[2]))
+            ui.txtResultado.append(pretty(resultado[2],use_unicode=True))
     else:
         #QMessageBox.critical(None,'Erro!',u'Entrada Inválida!',QMessageBox.Ok)
         mensagem(2,u'Erro!',u'Entrada inválida!',u'Os dados de entrada devem ser numéricos!')
