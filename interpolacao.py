@@ -110,7 +110,7 @@ def newton (x1,y1,precisao,ponto):
         else:
             resultado = resultado + ')'
     #resultado = simplify(resultado)
-    return (soma,resultado,simplify(resultado))
+    return (soma,resultado,simplify(resultado),diferencas)
 
 
 
