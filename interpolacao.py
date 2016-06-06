@@ -60,7 +60,8 @@ def lagrange(x1,y1,precisao,ponto):
             sSoma = sSoma + str(y1[i]) + '*' + str(sProduto)
         else: 
             sSoma = sSoma + ' + ' + str(y1[i]) + '*' + str(sProduto)
-    return (round(soma,precisao),sSoma,simplify(sSoma))
+        #print(pretty(sympify(str(y1[i]) + '*' + str(sProduto)),use_unicode=True))
+    return (round(soma,precisao),sSoma,simplify(sSoma),pretty(sympify(sSoma),use_unicode=True))
 
 
 def diferencasDivididas(x1,y1):
@@ -123,12 +124,12 @@ x = [8,11,15,18]
 y= [5,9,10,8]
 print(splinesLineares(x,y,4,12.7))
 
-init_printing(use_unicode=True)
+init_printing(use_unicode=False)
 cx = [1,2,4,5,7]
 cy= [52,5,-5,-40,10]
 expressao=sympify(lagrange(cx,cy,4,3)[1])
-print(pretty(expressao))
-print(lagrange(cx,cy,4,3)[1])
+#print(lagrange(cx,cy,4,3)[3])
+#print(lagrange(cx,cy,4,3)[1])
 
 cx = [1,2,4,5,7]
 cy= [52,5,-5,-40,10]

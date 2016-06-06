@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from PyQt4.QtGui import *
+
 import sys
 import interpolacao as z
 from interpolacaoUi import *
 import numpy as np
 import pylab as plt
 from sympy import *
+from PyQt4.QtGui import *
 
 reload(sys)  
 sys.setdefaultencoding('utf8')
@@ -126,15 +127,11 @@ def btnCalcularClick():
             ui.txtResultado.append('***************************')        
             ui.txtResultado.append(u'Polinômio não simplificado')
             ui.txtResultado.append('***************************')
-            #expressao = sympify(resultado[1])
-            #expressao = pretty(expressao,use_unicode=True)
-            #ui.txtResultado.append(expressao)
             ui.txtResultado.append('f(x)= ' + str(resultado[1]))
             ui.txtResultado.append('***************')        
             ui.txtResultado.append('SIMPLIFICANDO')
             ui.txtResultado.append('***************')
             ui.txtResultado.append(pretty(resultado[2],use_unicode=True))
-            
         else: #DIFERENÇAS DIVIDIDAS
             ponto = float(ui.txtPonto.text())
             resultado = z.newton(eixoX,eixoY,precisao,ponto)
@@ -150,7 +147,8 @@ def btnCalcularClick():
             ui.txtResultado.append(u'Polinômio não simplificado')
             ui.txtResultado.append('***************************')
             #expressao = sympify(resultado[1])
-            #expressao = pretty(expressao,use_unicode=True)
+            #expressao = pretty(expressao,use_unicode=False)
+            #print expressao
             #ui.txtResultado.append(expressao)
             ui.txtResultado.append('f(x)= ' + str(resultado[1]))
             ui.txtResultado.append('***************')        
