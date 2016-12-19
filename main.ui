@@ -171,6 +171,105 @@
      </property>
     </item>
    </widget>
+   <widget class="QPushButton" name="btnGrafico">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>20</y>
+      <width>85</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ver gráfico</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtX1">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>20</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>X inicial</string>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtX2">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>20</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>X final</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>40</y>
+      <width>62</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X inicial</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>40</y>
+      <width>62</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X final</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>90</y>
+      <width>281</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Estimativa inicial: Para o método da bisseção e regula falsi, corresponde ao intervalo. O método de newton precisa apenas de uma estimativa e o da secante, duas estimativas.</string>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -196,6 +295,18 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>txtFuncao</tabstop>
+  <tabstop>cmbMetodo</tabstop>
+  <tabstop>cmbErro</tabstop>
+  <tabstop>txtA</tabstop>
+  <tabstop>txtB</tabstop>
+  <tabstop>btnCalcular</tabstop>
+  <tabstop>btnGrafico</tabstop>
+  <tabstop>txtX1</tabstop>
+  <tabstop>txtX2</tabstop>
+  <tabstop>txtResultado</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file 'main.ui'
 #
-# Created: Sun May 22 19:04:29 2016
-#      by: PyQt4 UI code generator 4.10.4
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -68,9 +67,32 @@ class Ui_janelaPrincipal(object):
         self.cmbErro.addItem(_fromUtf8(""))
         self.cmbErro.addItem(_fromUtf8(""))
         self.cmbErro.addItem(_fromUtf8(""))
+        self.btnGrafico = QtGui.QPushButton(self.centralwidget)
+        self.btnGrafico.setGeometry(QtCore.QRect(390, 20, 85, 25))
+        self.btnGrafico.setObjectName(_fromUtf8("btnGrafico"))
+        self.txtX1 = QtGui.QLineEdit(self.centralwidget)
+        self.txtX1.setGeometry(QtCore.QRect(480, 20, 91, 21))
+        self.txtX1.setAlignment(QtCore.Qt.AlignCenter)
+        self.txtX1.setObjectName(_fromUtf8("txtX1"))
+        self.txtX2 = QtGui.QLineEdit(self.centralwidget)
+        self.txtX2.setGeometry(QtCore.QRect(570, 20, 91, 21))
+        self.txtX2.setAlignment(QtCore.Qt.AlignCenter)
+        self.txtX2.setObjectName(_fromUtf8("txtX2"))
+        self.label_4 = QtGui.QLabel(self.centralwidget)
+        self.label_4.setGeometry(QtCore.QRect(500, 40, 62, 15))
+        self.label_4.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.label_5 = QtGui.QLabel(self.centralwidget)
+        self.label_5.setGeometry(QtCore.QRect(590, 40, 62, 15))
+        self.label_5.setAlignment(QtCore.Qt.AlignCenter)
+        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.label_6 = QtGui.QLabel(self.centralwidget)
+        self.label_6.setGeometry(QtCore.QRect(300, 90, 281, 71))
+        self.label_6.setWordWrap(True)
+        self.label_6.setObjectName(_fromUtf8("label_6"))
         janelaPrincipal.setCentralWidget(self.centralwidget)
         self.menubar = QtGui.QMenuBar(janelaPrincipal)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 943, 27))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 943, 25))
         self.menubar.setObjectName(_fromUtf8("menubar"))
         self.menuArquivo = QtGui.QMenu(self.menubar)
         self.menuArquivo.setObjectName(_fromUtf8("menuArquivo"))
@@ -85,6 +107,15 @@ class Ui_janelaPrincipal(object):
 
         self.retranslateUi(janelaPrincipal)
         QtCore.QMetaObject.connectSlotsByName(janelaPrincipal)
+        janelaPrincipal.setTabOrder(self.txtFuncao, self.cmbMetodo)
+        janelaPrincipal.setTabOrder(self.cmbMetodo, self.cmbErro)
+        janelaPrincipal.setTabOrder(self.cmbErro, self.txtA)
+        janelaPrincipal.setTabOrder(self.txtA, self.txtB)
+        janelaPrincipal.setTabOrder(self.txtB, self.btnCalcular)
+        janelaPrincipal.setTabOrder(self.btnCalcular, self.btnGrafico)
+        janelaPrincipal.setTabOrder(self.btnGrafico, self.txtX1)
+        janelaPrincipal.setTabOrder(self.txtX1, self.txtX2)
+        janelaPrincipal.setTabOrder(self.txtX2, self.txtResultado)
 
     def retranslateUi(self, janelaPrincipal):
         janelaPrincipal.setWindowTitle(_translate("janelaPrincipal", "Zero de Funções", None))
@@ -101,6 +132,14 @@ class Ui_janelaPrincipal(object):
         self.cmbErro.setItemText(2, _translate("janelaPrincipal", "0.001", None))
         self.cmbErro.setItemText(3, _translate("janelaPrincipal", "0.0001", None))
         self.cmbErro.setItemText(4, _translate("janelaPrincipal", "0.00001", None))
+        self.btnGrafico.setText(_translate("janelaPrincipal", "Ver gráfico", None))
+        self.txtX1.setToolTip(_translate("janelaPrincipal", "X inicial", None))
+        self.txtX1.setText(_translate("janelaPrincipal", "0", None))
+        self.txtX2.setToolTip(_translate("janelaPrincipal", "X final", None))
+        self.txtX2.setText(_translate("janelaPrincipal", "3", None))
+        self.label_4.setText(_translate("janelaPrincipal", "X inicial", None))
+        self.label_5.setText(_translate("janelaPrincipal", "X final", None))
+        self.label_6.setText(_translate("janelaPrincipal", "Estimativa inicial: Para o método da bisseção e regula falsi, corresponde ao intervalo. O método de newton precisa apenas de uma estimativa e o da secante, duas estimativas.", None))
         self.menuArquivo.setTitle(_translate("janelaPrincipal", "Arquivo", None))
         self.actionSair.setText(_translate("janelaPrincipal", "Sair", None))
 
